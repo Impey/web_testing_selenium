@@ -9,6 +9,7 @@ class QatoolsForm
   GENDER_BUTTON = "sex-1"
   EXP_BUTTON = "exp-1"
   PROF_BUTTON = "profession-0"
+  PROFILE_PIC_BUTTON = "photo"
   
   
 
@@ -56,16 +57,34 @@ class QatoolsForm
   @chrome_driver.find_element(:id,GENDER_BUTTON).click
  end
 
+ def input_gender_button_value
+  @chrome_driver.find_element(:id,GENDER_BUTTON)['value']
+ end
+
  def input_exp_button
   @chrome_driver.find_element(:id,EXP_BUTTON).click
+ end
+
+ def input_exp_button_value
+  @chrome_driver.find_element(:id,EXP_BUTTON)['value']
  end
 
  def input_proff_button
   @chrome_driver.find_element(:id,PROF_BUTTON).click
  end
 
+ def input_proff_button_value
+  @chrome_driver.find_element(:id,PROF_BUTTON)['value']
+ end
+
+ def input_profile_picture_button
+  @chrome_driver.find_element(:id,PROFILE_PIC_BUTTON).click
+ end
+
  
 end
+
+
 
  
 
