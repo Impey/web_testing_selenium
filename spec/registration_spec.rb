@@ -44,6 +44,11 @@ describe 'testing the demoq automation form' do
     expect(@driver.input_proff_button_value).to eq 'Manual Tester'
    end
 
+   it 'should return the selected dropdown opition' do
+    @driver.dropdown
+    expect(@driver.dropdown_value).to eq "Africa"
+   end
+
   
 
    

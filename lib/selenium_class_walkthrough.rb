@@ -87,6 +87,10 @@ class QatoolsForm
     option.click
   end
 
+  def dropdown_value
+    @chrome_driver.find_element(:id,"continents")['value']
+  end
+
   
 
 
