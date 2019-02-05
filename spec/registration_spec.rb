@@ -4,7 +4,8 @@ describe 'testing the demoq automation form' do
    @driver.visit_practise_form
    @url = 'https://www.toolsqa.com/automation-practice-form'
    @fname = Generator.new.random_form.name
-   @lname = Generator.new.random_form.lanme
+   @lname = Generator.new.random_form.lname
+   @date = Generator.new.random_form.date.to_s
    
   end
   context 'testing the postive paths for the form' do
@@ -19,7 +20,14 @@ describe 'testing the demoq automation form' do
    end
 
    it 'should accept a last name' do
-    @driver.input_firstname_field(@lname)
+    @driver.input_lastname_field(@lname)
+    expect(@driver.input_lastname_field_value).to eq @lname
+   end
+
+   it 'should accept a date' do 
+    @driver.input_date_field(@date)
+    expect(@driver.input_date_field_value).to eq @date
+   end
 
 
   end
