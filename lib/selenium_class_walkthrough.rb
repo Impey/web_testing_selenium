@@ -6,8 +6,9 @@ class QatoolsForm
   FIRST_NAME_FIELD_NAME = 'firstname'
   LAST_NAME_FIELD_NAME = 'lastname'
   DATE_FIELD = 'datepicker'
-  GENDER_BUTTON = "sex-#{@ran}"
-  @rand = rand(0..1)
+  GENDER_BUTTON = "sex-1"
+  EXP_BUTTON = "exp-1"
+  
   
 
 
@@ -54,8 +55,15 @@ class QatoolsForm
   @chrome_driver.find_element(:id,GENDER_BUTTON).click
  end
 
+ def input_exp_button
+  @chrome_driver.find_element(:id,EXP_BUTTON).click
+ end
+
  
 end
+
+ 
+
 
 
 

@@ -28,8 +28,16 @@ describe 'testing the demoq automation form' do
     @driver.input_date_field(@date)
     expect(@driver.input_date_field_value).to eq @date
    end
+   
+   it 'should select female' do
+    @driver.input_gender_button
+   end
 
+   it 'should select 2 years' do 
+    @driver.input_exp_button
+   end
 
   end
 end
+
 
