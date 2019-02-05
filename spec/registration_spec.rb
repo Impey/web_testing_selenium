@@ -12,7 +12,7 @@ describe 'testing the demoq automation form' do
    expect(@driver.current_url).to eq @url
   end
 
-  it 'should accpt a first name' do
+  it 'should accpet a first name' do
     @driver.input_firstname_field(@name)
     expect(@driver.input_firstname_field_value).to eq @name
    end
