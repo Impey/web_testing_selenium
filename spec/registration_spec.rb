@@ -3,8 +3,9 @@ describe 'testing the demoq automation form' do
    @driver = QatoolsForm.new
    @driver.visit_practise_form
    @url = 'https://www.toolsqa.com/automation-practice-form'
-   @name =  Faker::HarryPotter.character
-   @place = Faker::HarryPotter.location
+   @fname = Generator.new.random_form.name
+   @lname = Generator.new.random_form.lanme
+   
   end
   context 'testing the postive paths for the form' do
   
@@ -13,9 +14,12 @@ describe 'testing the demoq automation form' do
   end
 
   it 'should accpet a first name' do
-    @driver.input_firstname_field(@name)
-    expect(@driver.input_firstname_field_value).to eq @name
+    @driver.input_firstname_field(@fname)
+    expect(@driver.input_firstname_field_value).to eq @fname
    end
+
+   it 'should accept a last name' do
+    @driver.input_firstname_field(@lname)
 
 
   end

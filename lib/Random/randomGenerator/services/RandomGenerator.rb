@@ -4,7 +4,11 @@ class RandomGenerator
  include Faker
   
   def name
-    Faker::HarryPotter.character
+    Faker::Name.first_name
+  end
+
+  def lname
+    Faker::Name.last_name
   end
 
 
