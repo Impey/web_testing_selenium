@@ -79,12 +79,26 @@ class QatoolsForm
 
  def input_profile_picture_button
   @chrome_driver.find_element(:id,PROFILE_PIC_BUTTON).click
- end
+ end 
+
+  def dropdown
+    mySelect = @chrome_driver.find_element(:id,"continents")
+    option = mySelect.find_element(:css, "option:nth-child(3)")
+    option.click
+  end
+
+  
+
 
  
 end
 
 
+test = QatoolsForm.new
+test.visit_practise_form
+sleep 5
+test.dropdown
+sleep 5
 
  
 

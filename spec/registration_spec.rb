@@ -34,10 +34,17 @@ describe 'testing the demoq automation form' do
     expect(@driver.input_gender_button_value).to eq 'Female'
    end
 
-   it 'should return' do 
+   it 'should return value for 2 years experience' do 
     @driver.input_exp_button
     expect(@driver.input_exp_button_value).to eq "2"
    end
+
+   it 'should return value of manual tester on the button' do
+    @driver.input_proff_button
+    expect(@driver.input_proff_button_value).to eq 'Manual Tester'
+   end
+
+  
 
    
 
