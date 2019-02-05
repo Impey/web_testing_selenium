@@ -8,6 +8,7 @@ class QatoolsForm
   DATE_FIELD = 'datepicker'
   GENDER_BUTTON = "sex-1"
   EXP_BUTTON = "exp-1"
+  PROF_BUTTON = "profession-0"
   
   
 
@@ -57,6 +58,10 @@ class QatoolsForm
 
  def input_exp_button
   @chrome_driver.find_element(:id,EXP_BUTTON).click
+ end
+
+ def input_proff_button
+  @chrome_driver.find_element(:id,PROF_BUTTON).click
  end
 
  
