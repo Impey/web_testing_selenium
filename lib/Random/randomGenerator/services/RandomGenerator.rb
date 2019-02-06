@@ -14,9 +14,6 @@ class RandomGenerator
   def date 
     Faker::Date.backward(10)
   end
-
-
-
 end
 
 

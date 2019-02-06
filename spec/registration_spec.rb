@@ -16,43 +16,38 @@ describe 'testing the demoq automation form' do
 
   it 'should accpet a first name' do
     @driver.input_firstname_field(@fname)
-    expect(@driver.input_firstname_field_value).to eq @fname
+     expect(@driver.input_firstname_field_value).to eq @fname
    end
 
    it 'should accept a last name' do
     @driver.input_lastname_field(@lname)
-    expect(@driver.input_lastname_field_value).to eq @lname
+     expect(@driver.input_lastname_field_value).to eq @lname
    end
 
    it 'should accept a date' do 
     @driver.input_date_field(@date)
-    expect(@driver.input_date_field_value).to eq @date
+     expect(@driver.input_date_field_value).to eq @date
    end
    
    it 'should select female' do
     @driver.input_gender_button
-    expect(@driver.input_gender_button_value).to eq 'Female'
+     expect(@driver.input_gender_button_value).to eq 'Female'
    end
 
    it 'should return value for 2 years experience' do 
     @driver.input_exp_button
-    expect(@driver.input_exp_button_value).to eq "2"
+     expect(@driver.input_exp_button_value).to eq "2"
    end
 
    it 'should return value of manual tester on the button' do
     @driver.input_proff_button
-    expect(@driver.input_proff_button_value).to eq 'Manual Tester'
-   end
+     expect(@driver.input_proff_button_value).to eq 'Manual Tester'
+    end
 
    it 'should return the selected dropdown opition' do
     @driver.dropdown
-    expect(@driver.dropdown_value).to eq "Africa"
-   end
-
-  
-
-   
-
+     expect(@driver.dropdown_value).to eq "Africa"
+    end
   end
 end
 

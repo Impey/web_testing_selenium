@@ -11,9 +11,6 @@ class QatoolsForm
   PROF_BUTTON = "profession-0"
   PROFILE_PIC_BUTTON = "photo"
   
-  
-
-
  def initialize
    @chrome_driver = Selenium::WebDriver.for :chrome 
  end
@@ -22,7 +19,6 @@ class QatoolsForm
    @chrome_driver.get(PRACTISE_FORM_URL)
  end
  
-
  def input_firstname_field(text)
    @chrome_driver.find_element(:name,FIRST_NAME_FIELD_NAME).send_keys(text)
  end
@@ -34,13 +30,11 @@ class QatoolsForm
  def input_lastname_field(text)
   @chrome_driver.find_element(:name,LAST_NAME_FIELD_NAME).send_keys(text)
  end
-
-
+ 
  def input_lastname_field_value 
   @chrome_driver.find_element(:name,LAST_NAME_FIELD_NAME)['value']
  end
  
-
  def current_url
    @chrome_driver.current_url 
  end
@@ -79,9 +73,9 @@ class QatoolsForm
 
  def input_profile_picture_button
   @chrome_driver.find_element(:id,PROFILE_PIC_BUTTON).click
- end 
+ end
 
-  def dropdown
+ def dropdown
     mySelect = @chrome_driver.find_element(:id,"continents")
     option = mySelect.find_element(:css, "option:nth-child(3)")
     option.click
@@ -90,19 +84,9 @@ class QatoolsForm
   def dropdown_value
     @chrome_driver.find_element(:id,"continents")['value']
   end
-
-  
-
-
- 
 end
 
 
-test = QatoolsForm.new
-test.visit_practise_form
-sleep 5
-test.dropdown
-sleep 5
 
  
 
